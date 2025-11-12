@@ -1,0 +1,9 @@
+[project]
+name = "explore-duckdb"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "duckdb[all]>=1.4.1",
+]

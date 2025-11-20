@@ -13,9 +13,9 @@ class S3Secret(BaseModel):
     region: str
     access_key_id: str
     secret_access_key: str
+    bucket_name: str
 
-
-class YamlSettings(BaseSettings):
+class Config(BaseSettings):
     model_config = SettingsConfigDict(
         yaml_file="secret.yaml", extra="ignore", case_sensitive=False
     )
@@ -33,5 +33,5 @@ class YamlSettings(BaseSettings):
         return (YamlConfigSettingsSource(settings_cls),)
 
 
-yaml_settings = YamlSettings()
-print(yaml_settings.model_dump())
+# yaml_settings = YamlSettings()
+# print(yaml_settings.model_dump())
